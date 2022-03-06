@@ -1,0 +1,540 @@
+html{
+    box-sizing: border-box;
+    font-size: 16px;
+    
+}
+
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3 ,h4, h5, p , ol , ul{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+body{
+    background: #212529;
+    height: 2000px;
+}
+
+ol,ul{
+    list-style: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+
+}
+
+/*burdan kaynaklı hata çıkabilir */
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Oswald',sans-serif;
+    color: #26313c;
+    line-height: 1,5px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    position: relative;
+    transition: all 0.7s;
+    z-index: 9;
+}
+
+
+.header .wrap{
+    width: 1140px;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+/* istersen burayı ekleyebilirsin
+
+.header.sticky{
+    width: 100%;
+    position: fixed;
+    background-color: #21252900;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0);
+    
+    
+}
+*/
+
+.header .logo{
+    margin: 0;
+    padding: 16px 0;
+}
+
+
+.header .logo a,
+.header .logo a img{
+    display: block;
+}
+
+.header .logo img{
+    width: 190px;
+}
+
+.header .menu ul{
+    display: flex;
+
+}
+
+.header .menu li{
+    padding: 16px;
+}
+
+.header .menu a{
+    font-size: 1.2rem;
+    color: white;
+    padding: 8px;
+    display: block;
+    text-transform: uppercase;
+    transition: 1s;
+}
+
+.header .menu a:hover{
+    color: #24cdd5;
+}
+
+.header .sidemenu-toggler{
+    position: absolute;
+    width: 40px;
+    padding: 6px;
+    top: 23px;
+    right: 40px;
+
+}
+
+.header .sidemenu-toggler > span{
+    background-color: white;
+    display: block;
+    height: 2px;
+}
+.header .sidemenu-toggler > span:nth-child(2){
+    margin: 4px 0 4px auto;
+    width: 75%;
+    transition: 0.3s all;
+}
+
+.header .sidemenu-toggler > span:nth-child(3){
+    margin-left:auto;
+    width: 50%;
+    transition: 0.6s all;
+
+}
+.header .sidemenu-toggler:hover > span:nth-child(2),
+.header .sidemenu-toggler:hover > span:nth-child(3){
+    width: 100%;
+
+}
+
+.header .sidemenu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #3bb78f;
+    background-image: linear-gradient(315deg, #3bb78f 0%, #3033c5c9 74%);
+    width: 40%;
+    height: 100vh;
+    z-index: 999;
+    padding: 4rem;
+    border-radius: 40px;
+    color: white;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+    background: rgba(121, 255, 250, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2.2px);
+    -webkit-backdrop-filter: blur(2.2px);
+    border: 1px solid rgba(121, 255, 250, 0.31);
+}
+
+
+.header .sidemenu.active{
+    transform: translate3d(0,0,0);
+}
+
+.header .sidemenu .close{
+    height: 30px;
+    width: 30px;
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 24px;
+
+}
+
+.header .sidemenu .close::before,
+.header .sidemenu .close::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 13px;
+    height: 28px;
+    width: 2px;
+    background: white;
+}
+
+.header .sidemenu .close::before{
+    transform: rotate(45deg);
+
+}
+.header .sidemenu .close::after{
+    transform: rotate(-45deg);
+    
+}
+
+.header .sidemenu nav ul{
+    padding-top:30px;
+
+}
+
+
+.header .sidemenu nav li{
+    padding:15px 0;
+}
+/* buradan emin değilim font size ı değiştirebiliriz */
+.header .sidemenu nav a{
+    font-size: 1.3rem;
+    color: white;
+    text-transform: uppercase;
+}
+
+.header .sidemenu footer{
+    padding-top: 100px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+
+}
+
+.header .sidemenu footer .social{
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.header .sidemenu footer .social a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition:all 0.3s linear ;
+    margin-right: 5px;
+    text-transform: uppercase;
+
+}
+/*devamı javascript de açılır menü yapmaya başladım Html sayfasına geçebilirsin kontrol amaçlı "İNLİNE JS KULLANACAĞIM"*/
+
+/*açılır menü tamamlandı NAVBARI DA AYARLADIM ŞİMDİ RESPONSİVE YAPIYORUM ---> AŞAĞIDA */
+
+@media (max-width: 767px){
+    .header .sidemenu{
+        width: 100%;
+    }
+
+    .header .sidemenu nav a{
+        font-size: 1rem;
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+    .header .sidemenu{
+        width: 70%;
+    }
+
+    .header .sidemenu nav a{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 1199px){
+    .header .menu{
+        display: none;
+    }
+}
+
+.home{
+    margin-top: 40px;
+}
+
+
+
+.hero-text{
+    font-family: 'Poppins',sans-serif;
+}
+/*Color u değiştireceğiz zaten */
+.title{
+    background-color: #0bceaf;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 10px 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+}
+.name{
+    font-size: 80px;
+    letter-spacing: -1px;
+}
+.designation{
+    font-size: 30px;
+}
+
+.email{
+    margin-top: 40px !important;
+    font-family: 'Poppins',sans-serif;
+    transition: 0.8s;
+    user-select: none;
+}
+.email:hover{
+    margin-left: 20px;
+}
+.social-icons li{
+    list-style: none;
+    margin-right: 35px;
+    margin-top: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+.phone{
+    transition: 0.8s;
+    user-select: none;
+}
+.phone:hover{
+    margin-left: 20px;
+}
+.social-icons li:hover{
+
+    font-size: 30px;
+}
+
+
+.hero-img{
+    margin-left: 140px;
+    margin-top: -40px;
+}
+
+.hero-img img{
+    margin: 0 auto;
+    float:none;
+    text-align: center;
+    border: 20px solid rgba(0,0,0,0.17);
+    border-radius: 50%;
+    transition: 0.8s;
+
+}
+.hero-img img:hover{
+    border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.img-border{
+    height: 400px;
+    width: 400px;
+    border: 20px solid rgba(0,0,0,0.07);
+    margin: 0 auto;
+    border-radius: 50%;
+    transition: 0.8s;
+}
+.img-border:hover{
+    border: 20px solid rgba(65, 64, 64, 0.17);
+}
+.about{
+    font-family: 'Poppins',sans-serif;
+}
+
+
+.gap{
+    margin-left: 90px;
+}
+
+.tag ul li{
+    margin: 0px 6px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    padding: 4px 0px;
+    display: inline-block;
+}
+
+.tag ul li span{
+    border: 1px solid #0bceaf;
+    padding: 4px 10px;
+    border-radius: 4px;
+}
+
+.tag ul li span:hover{
+    background-color: transparent !important;
+}
+
+.btn-danger{
+    background-color: #24cdd5;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.mh-service .mh-service-item{
+    padding: 20px;
+    border-radius: 4px;
+    font-family: 'Poppins',sans-serif;
+}
+
+.mh-service .mh-service-item .fa{
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 16px;
+}
+
+.mh-service .mh-service-item .fa-solid.fa-crop-simple{
+    color: #9774fa;
+}
+
+
+.mh-service .mh-service-item .fa-solid.fa-code{
+    color: #ed7256;
+}
+
+.mh-service .mh-service-item .fa-solid.fa-mobile-screen-button{
+    color: #2796e2;
+}
+
+
+.mh-service h3{
+    font-family: 'Poppins',sans-serif;
+    margin-bottom:18px;
+    font-size: 25px;
+    line-height: 34px;
+}
+
+
+/*education yerine ed yazdık haberin olsun */
+
+
+.mh-experience h3{
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+
+.mh-experience .mh-education-details .mh-education-item{
+    margin-bottom: 30px;
+    padding: 26px 30px;
+    border-radius:4px;
+    box-shadow: 0 25px 22px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+}
+.mh-experience .mh-education-details .mh-education-item:last-child{
+    margin-bottom: 0;
+}
+.mh-education-item h4{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+
+}
+
+.mh-education-item   .mh-eduyear{
+    margin: 10px 0;
+    color: #0bceaf;
+    font-family: 'Poppins',sans-serif;
+}
+
+.mh-education-item p{
+    font-size: 14px;
+    line-height: 23px;
+    margin-bottom: 0;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+
+.mh-education{
+    padding-right: 30px;
+}
+
+.mh-work{
+    padding-left: 30px;
+}
+
+.mh-work h3{
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 400;
+    margin-bottom: 60px;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+
+.mh-work .mh-experience-details .mh-work-item{
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    border-radius: 4px;
+    box-shadow: 0 25px 22px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+
+}
+.mh-work .mh-experience-details .mh-work-item:last-child{
+    margin-bottom: 0;
+
+}
+.mh-work-item h4{
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+ 
+.mh-work .mh-experience-details .mh-work-item .mh-eduyear{
+    margin: 10px 0;
+    color: #0bceaf;
+    font-family: 'Poppins',sans-serif;
+}
+
+.mh-work-item span{
+    font-size: 12px;
+    line-height: 22px;
+    font-family: 'poppins',sans-serif;
+    color: white;
+
+}
+.work-responsibility li{
+    font-size: 14px;
+    line-height: 23px;
+    margin: 2px 0;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}
+
+.work-responsibility li .fa{
+    font-size: 10px;
+    line-height: 23px;
+    margin-right: 10px;
+    font-family: 'Poppins',sans-serif;
+    color: white;
+}

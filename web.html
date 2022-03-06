@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa | PillTime</title>
+    <!--Font Awsome Cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <!--Kodlaraımı Okuyacak Olan Varsa Diye Bağlamaları Buraya Yapıyorum-->
+
+    <!--Oswald Font Ailesini Kullandım...-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+    <!--Burada Poppins Font Ailesini Kullandım...-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Poppins&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+
+
+
+    <!--Css in linki burada...-->
+    <link rel="stylesheet" href="web.css">
+
+
+</head>
+
+<body>
+    <!--Navbar İle Başlangıç Html-->
+
+
+    <main id="anasayfa" class="main">
+        <header class="header">
+            <div class="wrap d-flex">
+                <h1 class="logo">
+                    <!--Logoyu buraya Koydum Ama Dİkkatli Ol Logo Belli Olmadığından Margin ve Paddingde sorun yaşama ayarlarken...-->
+                    <a href=""><img class="logom" src="1018749-200.png"></a>
+                </h1>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="login.html">Giriş Yap</a></li>
+                        <li><a href="#anasayfa">Ana Sayfa</a></li>
+                        <li><a href="#hakkımızda">Hakkımızda</a></li>
+                        <li><a href="#neresi">Nerelerdeyiz</a></li>
+                        <li><a href="#work">Çalışmalar</a></li>
+                        <li><a href="">İletişim</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!--Yan Menü Ayarlaması-->
+            <a href="javascript:void(0);" class="sidemenu-toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="sidemenu">
+                <a href="javascript:void(0);" class="close"></a>
+                <nav>
+                    <ul>
+                        <li><a href="#anasayfa">Ana Sayfa</a></li>
+                        <li><a href="#hakkımızda">Hakkımızda</a></li>
+                        <li><a href="#neresi">Nerelerdeyiz</a></li>
+                        <li><a href="#work">Çalışmalar</a></li>
+                        <li><a href="">İlaçlar</a></li>
+                        <li><a href="">İletişim</a></li>
+                    </ul>
+                    <!--Bir sorun olursa Şuana kadarki kısımı kontrol etmene gerek yok tamamı doğru-->
+                </nav>
+                <footer>
+                    <div class="social">
+                        <!--İkonları Bulunca Buraya Eklersin-->
+                        <a href=""><img src="#facebook"></a>
+                        <a href=""><img src="#twitter"></a>
+                        <a href=""><img src="#instagram"></a>
+                    </div>
+                    <p>PillTime Ekibi Tarafından Yapılmıştır</p>
+                </footer>
+            </div>
+
+        </header>
+
+    </main>
+
+    <!--Anasayfa PillTime Tanıtımını yapıcaz-->
+    <br><br><br><br><br>
+
+    <section  id="anasayfa" class="home container text-white">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="hero-text">
+                    <span class="title">Merhaba Biz</span><br>
+                    <span class="name">InnovaTech'iz</span> <br>
+                    <span class="designation">Tüm Projeler Lisanslıdır</span><br>
+                    <span class="email"><i class="fa-solid fa-at"></i> innovatechmsg@gmail.com</span> <br>
+                    <span class="phone"><i class="fa fa-phone"></i> +554 942 21 46</span>
+
+                    <div class="social-icons d-flex">
+                        <li><i class="fa-brands fa-facebook-f"></i></li>
+                        <li><i class="fa-brands fa-twitter"></i></li>
+                        <li><i class="fa-brands fa-linkedin"></i></li>
+                        <li><i class="fa-brands fa-instagram"></i></li>
+                    </div>
+                </div>
+            </div>
+
+            <!--Bu kısımdaki profil fotoğrafı Tuna tarafından örnek olsun diye konmuştur sonrasında değiştirilecektir....-->
+            <div class="col-md-6">
+                <div class="hero-img">
+                    <div class="img-border">
+                        <img class="img-fluid" src="logo.png">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+
+    <!--Innova tech -->
+    <br><br><br><br><br>
+    <section class="about">
+        <div class="container">
+            <div id="hakkımızda" class="row">
+                <div class="col-md-6">
+                    <img src="görseller/seo-home1.png">
+                </div>
+                <div class="col-md-5 text-white gap">
+                    <br><br><br><br>
+                    <h2>İnnovaTech Hakkında</h2>
+                    <br>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur, quod sapiente quisquam
+                        magnam eum distinctio, ad nulla corporis in minus ea laboriosam molestias officia voluptate
+                        dolorum, esse animi. Mollitia, velit?
+                    </p>
+                    <br>
+
+                    <div  class="tag">
+                        <ul>
+                            <li><span>#Yazılım</span></li>
+                            <li><span>#Fikirler</span></li>
+                            <li><span>#İnovasyonlar</span></li>
+                            <li><span>#Çalışmalar</span></li>
+                            <li><span>#Kripto</span></li>
+                            <li><span>#Blockchain</span></li>
+                            <li><span>#Metaverse</span></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="download-button">
+                        <a href="PillTime_Yarsma_Baslg.pdf" class="btn btn-danger">Projeyi İndir</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Hizmetler Kısımının Paragrafı falan filan gel bak-->
+
+
+    <br><br><br><br><br><br>
+
+    <section class="mh-service text-white">
+        <div id="neresi" class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center">
+                    <h3>InnovaTech Neler Yapar</h3>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mh-service-item">
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <h3>TASARIM</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea aliquid suscipit
+                            voluptas numquam deserunt amet, dolore quod molestiae minima.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <div class="mh-service-item">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Web Geliştirme</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea aliquid suscipit
+                            voluptas numquam deserunt amet, dolore quod molestiae minima.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="mh-service-item">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h3>App Geliştirme</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea aliquid suscipit
+                            voluptas numquam deserunt amet, dolore quod molestiae minima.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="mh-service-item">
+                        <i class="fa-solid fa-crop-simple"></i>
+                        <h3>TASARIM</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea aliquid suscipit
+                            voluptas numquam deserunt amet, dolore quod molestiae minima.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-4">
+                    <div class="mh-service-item">
+                        <i class="fa-solid fa-code"></i>
+                        <h3>Web Geliştirme</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea aliquid suscipit
+                            voluptas numquam deserunt amet, dolore quod molestiae minima.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="mh-service-item">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <h3>App Geliştirme</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ea aliquid suscipit
+                            voluptas numquam deserunt amet, dolore quod molestiae minima.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ÇİZELGE BÖLÜMÜ-->
+
+    <br><br><br><br><br><br><br>
+
+    <section class="mh-experience" id="mh-experience">
+        <div class="container">
+            <div id="work" class="row">
+                <div class="col-smd-12 col-md-6">
+                    <div class="mh-education">
+                        <h3>Çalışmalarımız</h3>
+                        <div class="mh-education-details">
+                            <div class="mh-education-item">
+                                <h4>PillTime Detayları<a href=""> From Nexus</a></h4>
+                                <div class="mh-eduyear">2021-2022</div>
+                                <p>
+                                    PillTime İnnovaTech tarafından geliştirilen ve halen daha çalışmalarına devam eden
+                                    bir projedir projenin amacı ilaç zamanlarını hatırlatmak kullandıkları ilaçlarla
+                                    ilgili detaylı bilgiye sahip olmalarını sağlar.
+                                </p>
+                            </div>
+
+                            <div class="mh-education-item">
+                                <h4>PillTime Detayları<a href=""> From Nexus</a></h4>
+                                <div class="mh-eduyear">2021-2022</div>
+                                <p>
+                                    PillTime İnnovaTech tarafından geliştirilen ve halen daha çalışmalarına devam eden
+                                    bir projedir projenin amacı ilaç zamanlarını hatırlatmak kullandıkları ilaçlarla
+                                    ilgili detaylı bilgiye sahip olmalarını sağlar.
+                                </p>
+                            </div>
+                            <div class="mh-education-item">
+                                <h4>PillTime Detayları<a href=""> From Nexus</a></h4>
+                                <div class="mh-eduyear">2021-2022</div>
+                                <p>
+                                    PillTime İnnovaTech tarafından geliştirilen ve halen daha çalışmalarına devam eden
+                                    bir projedir projenin amacı ilaç zamanlarını hatırlatmak kullandıkları ilaçlarla
+                                    ilgili detaylı bilgiye sahip olmalarını sağlar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="mh-work">
+                        <h3>Yapılan Uygulamalar</h3>,
+                        <div class="mh-experience-details">
+                            <div class="mh-work-item">
+                                <h4>RateApp <a href="">From Nexus</a></h4>
+                                <div class="mh-eduyear">2021-2022</div>
+                                <span>TUNA BAK BURAYA</span>
+                                <ul class="work-responsibility">
+                                    <li><i class="fa-solid fa-circle-dashed"></i> Düzenle</li>
+                                    <li><i class="fa-solid fa-circle-dashed"></i> Düzenle</li>
+                                </ul>
+                            </div>
+
+                            <div class="mh-work-item">
+                                <h4>RateApp <a href=""> From Nexus</a></h4>
+                                <div class="mh-eduyear">2021-2022</div>
+                                <span>TUNA BAK BURAYA</span>
+                                <ul class="work-responsibility">
+                                    <li><i class="fa-solid fa-circle-dashed"></i> Düzenle</li>
+                                    <li><i class="fa-solid fa-circle-dashed"></i> Düzenle</li>
+                                </ul>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+    <!--Jquery Kütüphanesinin Source Kodu Burada (Kaynak Kodu)-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <!--Soran olursa Javascript kodlarını hazır buldum onları yazıyorum ezberimde değil ): -->
+    <!--Burada yaptığum Javascript kodunda tıklayınca açılan panel var...-->
+    <!--Altındada 135 i geçince açılan Sticky navbar var LÜTFEN DÜZELTİN BOK GİBİ OLDU O!!!!!!!!!-->
+    <script>
+
+
+        $(document).ready(function () {
+            $(".sidemenu-toggler").click(function () {
+                $(".sidemenu").addClass("active");
+            });
+
+            $(".close").click(function () {
+                $(".sidemenu").removeClass("active");
+            });
+
+            $(window).scroll(function () {
+                var sc = $(window).scrollTop();
+                if (sc > 135) {
+                    $(".header").addClass("sticky");
+                } else {
+                    $(".header").removeClass("sticky");
+                }
+            });
+
+
+
+        });
+
+        /*şimdi yapmamız gereken navbarı responsive yapmak */
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
